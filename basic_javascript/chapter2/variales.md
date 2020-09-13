@@ -28,3 +28,5 @@ const의 경우 값이 없으면 에러가 난다.
 * 변수와 상수의 에러 유발자.
   * 이름 앞의 숫자 (뒷 숫자는 가능)  
   * 명령어를 이름으로(let let, let const, let if 등등)  
+
+[실습 코드링크](https://github.com/stemkorea7/javascript/blob/master/basic_javascript/chapter2/variables.js)
