@@ -7,3 +7,5 @@ html의 <head> 부분에 디자인을 담당하는 CSS파일을 링크할 수 �
 * 자바스크립트 사용 방법  
 html의 </body>가 닫히는 부분에 script를 이용해 자바스크립트 코드를 작성할 수 있지만 가독성을 위해 자바스크립트 파일을 링크한다.
 body가 닫히는 부분에 스크립트를 작성하는 이유는 html 코드 전역에 자바스크립트 파일을 적용하기 위함이다.
+
+[code link]https://github.com/stemkorea7/javascript/blob/master/basic_javascript/chapter1/app.js
