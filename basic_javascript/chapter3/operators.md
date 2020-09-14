@@ -17,4 +17,4 @@
    * 더한 값: +=
    * 뺀 값: -=
   
-  [코드 실습링크](https://github.com/stemkorea7/javascript/blob/master/basic_javascript/chapter3/operators.js)
+* [코드 실습링크](https://github.com/stemkorea7/javascript/blob/master/basic_javascript/chapter3/operators.js)
