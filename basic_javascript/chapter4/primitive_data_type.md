@@ -16,16 +16,16 @@
   구매를 못하도록 설계가 가능.  
   * const isLogin = true; (or false)  
   
-* 값 미설정(Undefined)  
+* 값 설정 X (Undefined)  
   * 값을 설정하지 않았을 때 undefined를 반환.  
   * let age; (const의 경우 값을 설정하지 않으면 오류가 난다)  
   
-* null 값(Null)  
+* 값이 X (Null)  
   * null은 값이 없음을 의미한다.  
   * const age = null;  
   
 * Undefined와 Null값의 차이  
-  * Undefined는 말그대로 변수선언시값을 설정하지 않는 것이고 null값은 값은 있지만 
+  * Undefined는 말그대로 변수 선언 시 값설정을 안하는 것이고 null값은 값은 있지만 
   아무것도 아니라는 것을 의미한다. 혼동주의
   
   
