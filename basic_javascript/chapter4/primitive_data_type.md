@@ -10,7 +10,7 @@
   * const name = "George";  
 
 * 참 or 거짓 형(Boolean)  
-  * Boolean형은 True or Fales 값만 가질 수 있음  
+  * Boolean형은 값이 True or False 형태.    
   * 예를 들어 쇼핑몰 사이트에 로그인을 해야만 물건을 살 수 있다고 가장할 때 
   아이디와 패스워드가 맞으면 True 값이 반환되어 구매를 할 수 있고, 틀릴 시 False 값이 반환 되어
   구매를 못하도록 설계가 가능.  
