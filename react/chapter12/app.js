@@ -46,7 +46,7 @@ class App extends Component {
   render() {
     return (
       <>
-        {/* 필터링 부분 이해필요 */}
+        {/* 0 보다 큰 counters.value가 생기면 길이[프로퍼티]만큼 추가 */}
         <NavBar
           totalCounters={this.state.counters.filter((c) => c.value > 0).length}
         />
