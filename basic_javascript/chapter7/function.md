@@ -8,7 +8,7 @@
   * 유지보수가 용이.  
   * 가독성.  
 
-* 함수 제작법: function greet(이름) (매개변수) {내용};
+* 함수 제작법: function(명령어) greet(이름) (매개변수) {내용};
 * 함수 호출법: greet(인자값);  
 
 * function greet() {...} / greet(); 기본 함수 제작 및 호출  
