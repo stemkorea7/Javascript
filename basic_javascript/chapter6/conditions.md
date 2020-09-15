@@ -33,5 +33,6 @@
     * 첫번째 조건이 true면 첫번째 중괄호 내용이 실행되고, false면 두번째 조건이 실행된다.  
     두번째 조건이 true면 두번째 중괄호 내용이 실행되고, false면 else뒤의 세번째 중괄호 내용이 실행된다.  
   * 항상 거짓 값  
-    * fase, 0, "", null, undefined, NaN
+    * fase, 0, "", null, undefined, NaN  
+  * [실습 코드링크](https://github.com/stemkorea7/javascript/blob/master/basic_javascript/chapter6/conditions.js)
     
