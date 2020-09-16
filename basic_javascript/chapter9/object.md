@@ -21,5 +21,6 @@
     * window.console을 쳐본다. 우리가 주로쓰는 log()메소드(Method)를 확인할 수 있다.
   * console 타입 확인
     * 콘솔창에 typeof console을 쳐본다. console의 타입은 객체인 것을 확인할 수 있다. console.log는 함수
-    * 콘솔창에 window를 쳐본다. 타입은 객체인 것을 알 수 있다.
+    * 콘솔창에 window를 쳐본다. 타입은 객체인 것을 알 수 있다.  
     
+* [실습 코드링크](https://github.com/stemkorea7/javascript/blob/master/basic_javascript/chapter9/object.js)
