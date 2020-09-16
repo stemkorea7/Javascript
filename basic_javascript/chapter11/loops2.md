@@ -7,5 +7,5 @@
     **주의: ++ 증감연산자를 넣지 않을경우 똑같은 숫자가 무한반복됨**
 * do while 문  
   * 사용법: do {...} while(조건)  
-  ** while문과의 차이점 do while의 경우 먼저 실행을 하기때문에 조건이 false라도 한번의 루프는 돌아감.**  
+  **while문과의 차이점 do while의 경우 먼저 실행을 하기때문에 조건이 false라도 한번의 루프는 돌아감.**  
 * [실습 코드링크](https://github.com/stemkorea7/javascript/blob/master/basic_javascript/chapter11/loops2.js)
