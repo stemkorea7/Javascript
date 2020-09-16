@@ -7,6 +7,8 @@
   * userList[0]  
 * 마지막 인덱스 값 삭제 pop  
   * userList.pop();  
+* 마지막 인덱스 값 생성 push  
+  * userList.push("생성 값 입력");  
 * 맨 처음 인덱스 값 삭제 shift  
   * userList.shift();  
 * 맨 처음 인덱스 값 생성 unshift  
@@ -14,4 +16,6 @@
 * 배열의 길이 확인 .length  
   * console.log(userList.length)   
 * 값의 인덱스 호출 indexOf  
-  * console.log(indexOf('값 입력'));
+  * console.log(indexOf('값 입력'));  
+  
+* [실습 코드링크](https://github.com/stemkorea7/javascript/blob/master/basic_javascript/chapter8/array.js)
