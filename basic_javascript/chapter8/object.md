@@ -2,10 +2,12 @@
 > 여러개의 정보를 한곳에 담는 그릇이다. 정보를 담을때 방법은 2가지로 나뉠 수 있다.  
 > 키(Key)와 값(value)을 갖고있는 프로퍼티(property)방식이 있고, 함수를 입력하는 메소드(Method)방식이 있다.  
 
-* 사용법: const user = { ... } 객체선언은 변수선언과 똑같다. 다만 중괄호를 추가해 중괄호안에 프로퍼티(property)나 메소드(Method)를 담을 수 있다.    
-* 프로퍼티(property)란? key와 value를 갖고 있는 객체내 요소이다.
+* 사용법: const user = { ... }   
+  * 객체선언은 변수선언과 똑같다. 다만 중괄호를 추가해 중괄호안에 프로퍼티(property)나 메소드(Method)를 담을 수 있다.      
+* 프로퍼티(property)란? key와 value를 갖고 있는 객체내 요소이다.  
   * 사용법: name(key): "George"(value) 
-           name(key): ["George", "Bob", ...](value) 배열 역시 키(Key)와 값(value)으로 이루어져 있으므로 프로퍼티이다.  
+           name(key): ["George", "Bob", ...](value) 
+  * 배열 역시 키(Key)와 값(value)으로 이루어져 있으므로 프로퍼티이다.  
 * 메소드(Method)란? 객체내에 함수를 말한다.  
   * 사용법: getName(key): function(...) {...}    
 **프로퍼티(property)나 메소드(Method)를 추가할때는 ,(콤마)를 사용하고 프로퍼티와 메소드를 호출할 때는 .(점)을 활용한다.**  
