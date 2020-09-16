@@ -8,7 +8,7 @@
            name(key): ["George", "Bob", ...](value) 배열 역시 키(Key)와 값(value)으로 이루어져 있으므로 프로퍼티이다.  
 * 메소드(Method)란? 객체내에 함수를 말한다.  
   * 사용법: getName(key): function(...) {...}    
-> 프로퍼티(property)나 메소드(Method)를 추가할때는 ,(콤마)를 사용하고 프로퍼티와 메소드를 호출할 때는 .(점)을 활용한다.  
+**프로퍼티(property)나 메소드(Method)를 추가할때는 ,(콤마)를 사용하고 프로퍼티와 메소드를 호출할 때는 .(점)을 활용한다.**  
 
 * 자바스크립트 내장 객체와 닮은점
   * console.log();와 user.greet();는 같은 객체이지만 콘솔의 경우 자바스크립트에 내장되어있는 메소드(Method)이고, user,greet();의 경우 우리가 만든 (Method)이다. console같은 경우
