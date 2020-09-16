@@ -28,11 +28,11 @@ ForEach역시 반복문이며 value와 index를 출력한다.
   * 배열 값과 인덱스 출력 실습.  
 
 ** For of가 ForEach보다 활용도가 높은 이유  
-> ForEach는 사용할 수 있는 반복적인 객체(Iterable)의 제한도 있지만  
+ForEach는 사용할 수 있는 반복적인 객체(Iterable)의 제한도 있지만  
 반복문 안에 조건을 넣었을 경우 forEach는 continue나 break를 사용할 수 없다.**  
   
 ### For in  
 > 반복가능한 객체(Iterable)를 반복하는 문법이며, 기본적으로 키(key)를 읽어들인다.  
 * 사용법: for(변수 in 객체) {...}  
-  * 배열의 키(key)값을 출력해보자
-
+  * 배열의 키(key)값을 출력해보자  
+* [실습 코드링크](https://github.com/stemkorea7/javascript/blob/master/basic_javascript/chapter11/loops.js)
