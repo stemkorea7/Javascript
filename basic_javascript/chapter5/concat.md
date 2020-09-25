@@ -9,4 +9,4 @@
     *백틱의 키보드 위치는 ~표시  
   * 백틱(``)안에 변수를 넣고싶을 경우: ${  } 사용  
 * concat의 다양한 결과  
-* [실습 코드링크](https://github.com/stemkorea7/javascript/blob/master/basic_javascript/chater5/concat.js)
+* [실습 코드링크](https://github.com/stemkorea7/javascript/blob/master/basic_javascript/chapter5/concat.js)
