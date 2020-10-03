@@ -26,4 +26,4 @@
     * 매개변수 값을 0으로 세팅하고, 인자값을 모두 넣어준다면 정상적으로 출력.  
 **주의: 함수의 매개변수와 함수호출의 인자값 개수는 반드시 같아야 한다.  
 예) function greet(num1, num2) {...}; / greet(4); 오류발생**  
-* [실습 코드링크](https://github.com/stemkorea7/javascript/tree/master/basic_javascript/chapter7)
+* [실습 코드링크](https://github.com/stemkorea7/javascript/blob/master/basic_javascript/chapter7/function.js)
