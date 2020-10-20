@@ -1,4 +1,4 @@
-세션과 로컬 스토리지는 웹브라우저가 새로고침됐을때 크게 두가지 차이점이 있는데요.
+세션과 로컬 스토리지는 웹브라우저
 로컬스토리지
 localStorage.setItem("key" , "value"); 로컬스토리지의 키와 벨류값은 항상 문자열로 출력된다.
 localStorage.setItem("name" , "George"); 작성 후 스토리지 확인 (새로고침을 해도 키와 값이 사라지지 않는다.)
@@ -27,9 +27,11 @@ const getTodo = localStorage.getItem("todo");
 console.log(getTodo); 확인해 보면 여전히 문자열로 나옴
 
 문자열을 배열로 바꾸기
-localStorage.setItem("todo", JSON.stringify(todoList)); JSON.stringify(todoList)로 감싸줌 json.stringify()객체는 기본데이터의 구조는 남기고 문자열로 출력
-확인을 해보면 배열의 구조는 확인할 수 있지만 배열의 값들이 여전히 문자열로 출력되는것을 볼 수 있음
-const getTodo = JSON.parse(localStorage.getItem("todo")); 그래서 겟할때 제이선 팔스로 감싸줌 그럼 원래의 값을 얻을 수 있음
+localStorage.setItem("todo", JSON.stringify(todoList)); 
+JSON.stringify(todoList)로 감싸줌 JSON.stringify ()는 JavaScript 객체를 가져온 다음 JSON 문자열로 변환하는 문법인데 기본데이터의 구조는 남기고 문자열로 출력해줌.  
+확인을 해보면 배열의 구조는 확인할 수 있지만 배열의 값들이 여전히 문자열로 출력되는것을 볼 수 있음 
+
+const getTodo = JSON.parse(localStorage.getItem("todo")); 여기서 JSON.parse ()는 JSON 문자열을 가져 와서 JavaScript 객체로 변환합니다. 
 
 todoList 값을 { todo1: "티비보기", todo2:"아무것도 안하기"} 로 넣으면 객체의 값들을 얻을 수 있음
 
