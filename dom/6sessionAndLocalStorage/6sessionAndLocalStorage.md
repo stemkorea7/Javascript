@@ -28,10 +28,11 @@ console.log(getTodo); 확인해 보면 여전히 문자열로 나옴
 
 문자열을 배열로 바꾸기
 localStorage.setItem("todo", JSON.stringify(todoList)); 
-JSON.stringify(todoList)로 감싸줌 JSON.stringify ()는 JavaScript 객체를 가져온 다음 JSON 문자열로 변환하는 문법인데 기본데이터의 구조는 남기고 문자열로 출력해줌.  
+JSON.stringify(todoList)로 감싸줌 JSON.stringify ()는 JavaScript 배열이나 객체를 가져온 다음 JSON 문자열로 변환하는 문법인데 기본데이터의 구조는 남기고 문자열로 출력해줌.  
 확인을 해보면 배열의 구조는 확인할 수 있지만 배열의 값들이 여전히 문자열로 출력되는것을 볼 수 있음 
 
-const getTodo = JSON.parse(localStorage.getItem("todo")); 여기서 JSON.parse ()는 JSON 문자열을 가져 와서 JavaScript 객체로 변환합니다. 
+const getTodo = JSON.parse(localStorage.getItem("todo")); 여기서 JSON.parse ()는 JSON 문자열을 가져 와서 JavaScript 객체로 변환하는 문법인데, 방금 만들었던 JSON문자열을
+원래 우리가 만들었던 자바스크립트 배열로 변환해주는 것.
 
-todoList 값을 { todo1: "티비보기", todo2:"아무것도 안하기"} 로 넣으면 객체의 값들을 얻을 수 있음
+todoList 값을 { todo1: "티비보기", todo2:"아무것도 안하기"} 값을 객체로 변경해도 원래의 자바스크립트 객체를 얻을 수 있는것을 확인할 수 있음.
 
