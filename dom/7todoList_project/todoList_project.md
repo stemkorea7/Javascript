@@ -189,3 +189,141 @@ style.css
   padding: 0.5rem;
 }
 
+day5
+리스너 추가
+.js
+todoList.addEventListener("click", deleteCheckFn);
+
+
+function deleteCheckFn(e) {
+  const item = e.target;
+  if (item.classList[0] === "delete-btn") {
+// item.remove(); 그냥 타겟을 삭제하면 삭제버튼만 삭제된다. 그래서 아래와 같이 부모엘리먼트까지
+선택해서 모두 삭제해준다.
+    const todo = item.parentElement;
+    todo.remove();
+  }
+삭제버튼을 눌러보다보면 가끔 삭제가 안될때가 있다. 이유를 알기위해 console.log(item); 으로 찍어본다
+삭제가 안될땐 i태그가 뜨고 삭제가 될땐 button 태그가 뜨는걸 알 수 있다. 그래서 선택도구로 자세히
+살펴보면 i태그가 z축 즉, 맨위에 있고 그밑에 button태그가 깔려있는것을 알 수 있다. 
+그래서 i태그에 가려져 버튼이 클릭이 안돼 삭제함수가 실행되지 않는다.
+우리는 이때 css로 i태그가 클릭이 안되게할 수 있는데 명령어는
+
+style.css 
+font awesome에서 제공하는 아이콘들을 무시하자.
+.fa-trash,
+.fa-check {
+  pointer-events: none;
+}
+확인
+
+그리고 이번엔 체크버튼의 기능을 만들어보자
+app.js
+  if (item.classList[0] === "check-btn") {
+    const todo = item.parentElement;
+    todo.classList.toggle("checkIt"); 토글로 checkIt 클래스를 만들어서
+  }
+}
+
+.css
+텍스트에 줄을 긋고, 불투명하게 만들어준다.
+.checkIt {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+그리고 div 부모 .todo 클래스에  transition: all 0.5s ease; 추가
+
+day6
+Animations (skip.)
+
+day7
+Filtering
+
+.html
+html옵션을 form안에 넣어줌
+ 
+    <div class="select">
+        <select name="todos" class="filter">
+            <option value="all">All</option>
+            <option value="checked">Checked</option>
+            <option value="unChecked">UnChecked</option>
+        </select>
+    </div>
+
+select 스타일링
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none;
+  border: none;
+  color: teal;
+  width: 10rem;
+  cursor: pointer;
+  padding: 1rem;
+}
+
+.select {
+  margin: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.select::after {
+  content: "\25BC";
+  position: absolute;
+  background: teal;
+  top: 0;
+  right: 0;
+  padding: 1rem;
+  pointer-events: none;
+}
+
+app.js
+const filterOption = document.querySelector(".filter");
+셀렉트 클래스 filter 선택
+
+filterOption.addEventListener("click", filterTodo);
+이벤트 리스너 추가
+
+function filterTodo(e) {}
+filterTodo 함수 생성
+
+
+function filterTodo(e) {
+  const todos = todoList.childNodes;
+필터링을 위해 차일드 노드 생성 / 콘솔로 todos 확인
+
+  for (todo of todos) {
+    switch (e.target.value) {
+      case "all":
+        todo.style.display = "flex";
+        console.log("all");
+        break;
+여기서 case의 all은 html Option의 all value이다. all은 모두 표시기때문에 조건없이 flex
+
+      case "checked":
+        if (todo.classList.contains("checkIt")) {
+          todo.style.display = "flex";
+          console.log("checked");
+        } else {
+          todo.style.display = "none";
+        }
+        break;
+
+case checked value일 경우 
+모든 것 중 토글 checkIt 클래스가 포함되어 있는 것들만 모두 flex 아니면 none
+checkIt이 포함되어 있는지 알기위해 (todo.classList.contains("checkIt") 조건을 줌
+
+      case "unChecked":
+        if (!todo.classList.contains("checkIt")) {
+          todo.style.display = "flex";
+          console.log("unchecked");
+        } else {
+          todo.style.display = "none";
+        }
+    }
+  }
+}
+
