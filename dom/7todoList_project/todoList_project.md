@@ -138,3 +138,54 @@ function addTodo(e) {
 이내용들을 꾸미도록 하겠다.
 
 day4
+체크버튼과 삭제버튼 디자인
+
+style.css
+.todo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.todo-list {
+  min-width: 30%;
+  list-style: none;
+}
+
+.todo {
+  margin: 0.5rem;
+  background: white;
+  color: black;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.todo li {
+  flex: 1;
+}
+
+.delete-btn,
+.check-btn {
+  background: coral;
+  color: white;
+  border: none;
+  padding: 1rem;
+  font-size: 1rem;
+}
+
+.check-btn {
+  background: teal;
+}
+
+app.js
+const input = document.querySelector(".input"); html에 있는 인풋 클래스 선택
+newTodo 생성하는 newTodo.innerText = input.value; 로 변경 그리고 input.value = ""; 빈공간으로 초기화
+
+style.css
+.todo-item 패딩 0.5 추가
+.todo-item {
+  padding: 0.5rem;
+}
+
