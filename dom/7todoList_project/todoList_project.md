@@ -323,6 +323,7 @@ checkIt이 포함되어 있는지 알기위해 (todo.classList.contains("checkIt
         } else {
           todo.style.display = "none";
         }
+        아니면 똑같이 
     }
   }
 }
