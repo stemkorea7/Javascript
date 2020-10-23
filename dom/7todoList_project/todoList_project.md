@@ -355,7 +355,10 @@ function saveLocal(inputTodo) {
 todos.push()에 의해 배열이 추가되고, 그배열은 setItem을 통해 브라우저에 저장된다.
 saveLocal(input.value);
 
-값이 저장됐다면 그값을 브라우저 ui에 뿌려줘야하는데, 일단 저장값을 불러오자.
+값이 저장됐다면 그값을 브라우저 ui에 뿌려줘야하는데, 일단 DOM에 저장되어있는 컨텐츠를 불러오기위해 이벤트리스너에 코드를 추가하자
+document.addEventListener('DOMContentLoaded', getTodo)
+
+저장된 값을 불러오는 함수도 만들어보자.
 function getTodo() {
   let todos;
   if (localStorage.getItem("todos") === null) {
@@ -402,4 +405,3 @@ for문을 통해 저장된 모든 엘리먼트를 불러온다
     todoList.appendChild(todoDiv);
   }
 }
-
