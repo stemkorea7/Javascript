@@ -328,3 +328,78 @@ checkIt이 포함되어 있는지 알기위해 (todo.classList.contains("checkIt
   }
 }
 
+
+day8
+
+app.js
+function saveLocal(inputTodo) {
+  let todos;
+  if (localStorage.getItem("todos") === null) {
+    todos = [];
+  } else {
+    todos = JSON.parse(localStorage.getItem("todos"));
+  }
+
+로컬스토리지에 있는 값들이 있는지 체크.
+없으면 빈공간으로 반환, 있으면 todos 배열에 getItem 한다.(JSON.parse를 활용해서 원형값 겟)
+
+  todos.push(inputTodo);
+  localStorage.setItem("todos", JSON.stringify(todos));
+}
+
+입력받은 값은 todos 배열에 추가해준다.
+그리고 setItem을 통해 todos에 JSON으로 문자화 시켜줘서 로컬에 저장한다.
+
+이 함수는 투두리스트 생성하는 함수안에 넣어주는데 li태그를 생성하는 곳 밑에 넣어준다.
+인자값은 input의 값을 넣어준다. 그렇다면 input.value가 saveLocal의 매개변수로가서
+todos.push()에 의해 배열이 추가되고, 그배열은 setItem을 통해 브라우저에 저장된다.
+saveLocal(input.value);
+
+값이 저장됐다면 그값을 브라우저 ui에 뿌려줘야하는데, 일단 저장값을 불러오자.
+function getTodo() {
+  let todos;
+  if (localStorage.getItem("todos") === null) {
+    todos = [];
+  } else {
+    todos = JSON.parse(localStorage.getItem("todos"));
+  }
+
+일단 로컬스토리지에 있는 값들이 있는지 체크. 있다면 json 형태로 get
+
+for문을 통해 저장된 모든 엘리먼트를 불러온다
+  for (todo of todos) {
+    console.log(todo);
+콘솔을 통해 현재 todos에 저장된 값을 불러보자.
+
+그리고 기존 만들었던 체크박스나 삭제박스 div등을 불러오기 위해 복붙한다.
+    //div 생성
+    const todoDiv = document.createElement("div");
+    todoDiv.classList.add("todo");
+
+    //li 태그 생성
+    const newTodo = document.createElement("li");
+    newTodo.classList.add("todo-item");
+    newTodo.innerText = todo;
+여기 값은 기존input.value가 아니라 for문에서 찍어봤던 저장된 값 todo
+
+    todoDiv.appendChild(newTodo);
+
+값만 불러오기 때문에 saveLocal()을 호출하는 함수는 필요없다.
+
+    //체크버튼
+    const checkButton = document.createElement("button");
+    checkButton.classList.add("check-btn");
+    checkButton.innerHTML = '<i class="fas fa-check"> </i>';
+    todoDiv.appendChild(checkButton);
+
+    //삭제버튼
+    const deleteButton = document.createElement("button");
+    deleteButton.classList.add("delete-btn");
+    deleteButton.innerHTML = '<i class="fas fa-trash"> </i>';
+    todoDiv.appendChild(deleteButton);
+
+    //ul 태그에 리스트 추가
+    todoList.appendChild(todoDiv);
+  }
+}
+
