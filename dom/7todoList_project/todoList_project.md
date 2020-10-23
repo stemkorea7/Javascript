@@ -405,3 +405,46 @@ for문을 통해 저장된 모든 엘리먼트를 불러온다
     todoList.appendChild(todoDiv);
   }
 }
+
+로컬저장소에서 완전히 삭제하기
+
+로컬 삭제 함수 만들기
+function deleteLocalTodo(todo) {
+  let todos;
+  if (localStorage.getItem("todos") === null) {
+    todos = [];
+  } else {
+    todos = JSON.parse(localStorage.getItem("todos"));
+  }
+}
+체크!
+
+deleteCheckFn에서 delete하는 함수 remove() 위에 deleteLocalTodo()함수를 호출한다.
+단! 클릭하는 타겟의 부모인 값을 인자값으로 넣어준다.
+deleteLocalTodo(todo);
+
+그리고 다시 function deleteLocalTodo(todo) 함수로 와서
+console.log(todo.children)로 매개변수 값을 찍어보면 삭제하려는 div를 모두확인할 수 있다.
+
+li값을 모두 삭제하기 위해 접근해본다. 값을 확인하는 명령어를 찾기위해 li요소를 열어본다.
+console.log(todo.children[0])
+
+innerText에 값이 있으므로 innerText를 작성하고, 클릭했을때 값을 콘솔로 찍어본다.
+console.log(todo.children[0].innerText)
+
+그럼 우리가 선택한 값을 찾아 삭제하기 위해 선택한 값을 저장할 수 있는 변수를 하나 선언하자
+const todoIndex = todo.children[0].innerText;
+여기서 todo는 deleteCheckFn에서 받아온 인자값 타겟의 div 정도다.
+그리고 todo.children[0] 은 todo의 div 중 첫번째 자식인 li를 선택하기 위해 children[0] 을 작성
+그 li의 값을 찾기위해 todo.children[0].innerText 를 입력해준다.
+
+다음은
+todos.splice(todos.indexOf(todoIndex), 1);
+todos배열에 splice 명령어를 적어주는 인덱스 넘버가 필요하다.
+인덱스 넘버를 뽑기위해 todos.indexOf() 를 작성하고 그안에
+const todoIndex = todo.children[0].innerText;
+todoIndex를 넣어준다. 여기서 todoIndex는 "삭제 타겟의 li의 값이다"
+즉, 삭제 타겟의 li값을 todos 배열의 index 넘버로 뽑는 것이다.
+
+마지막으로 로컬스토리지에 저장
+localStorage.setItem("todos", JSON.stringify(todos));
