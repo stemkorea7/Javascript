@@ -55,3 +55,37 @@ const newVideo = videos.map((video) => video.length < 9 ? video : "비어있음"
 
 const newVideo = videos.map((video) => video.toUpperCase());
 그리고 기본적으로 모든값이 리턴되므로 이런식으로 쓸 수 있다.
+
+간단히 카피하는 방법
+
+const descRating = [...ratings];
+console.log(descRating);
+카피를 하고자하는 배열의 변수 앞에 점을 3개만 넣어주면 됌.
+
+descRating.sort((a, b) => b - a);
+에로우 펑션을 이용해서 내림차순으로 만들어 줄 수 있다.
+
+console.log(ratings);
+원본을 확인해 보면 수정이 안된것을 확인할 수 있음.
+
+const name = "george";
+const letters = [...name]
+console.log(letters);
+문자열을 넣으면 각각의 스펠링이 배열로 만들어진다.
+
+const names = ["name1", "name2"];
+const otherNames = ["name3", "name4", "name5"];
+const allNames = names.concat(otherNames);
+console.log(allNames);
+배열 두개를 합치려면 concat 함수를 활용해야하지만
+
+const allNames = [...names, ...otherNames]
+이렇게 수정하면 좀더 직관적으로 합칠 수 있다.
+
+또한 names 배열을 지우고
+const allNames = ["name1","name2", ...otherNames];
+이렇게 넣어도 복사가 가능하고 복사를 앞에서 할 수도 있다.
+
+
+
+
